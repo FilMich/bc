@@ -9,7 +9,7 @@ void Client::sendData(std::string data)
 
 sf::TcpSocket* Client::connect()
 {
-    if (socket.connect("192.168.240.125", 53000) == sf::Socket::Done) {
+    if (socket.connect("192.168.1.106", 53000) == sf::Socket::Done) {
         std::cout << "Connected to server" << std::endl;
         return &socket;
     }

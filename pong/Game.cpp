@@ -1,5 +1,8 @@
 #include "game.h"
 #include <iostream>
+#include <sstream>
+
+
 Game::Game(sf::RenderWindow* window, bool client, sf::TcpSocket* socket) :client(client), socket(socket), window(window), greenBall(20) {
     greenBall.setFillColor(sf::Color::Green);
     greenBall.setPosition(100, 100);
@@ -23,19 +26,22 @@ void Game::update() {
         this->packet = "N";
         if (sf::Keyboard::isKeyPressed(sf::Keyboard::W)) {
             greenBall.move(0, -0.5 );
-            this->packet = "W";
+            this->packet = "" + std::to_string(greenBall.getPosition().x) + ":" + std::to_string(greenBall.getPosition().y);
         }
         if (sf::Keyboard::isKeyPressed(sf::Keyboard::A)) {
             greenBall.move(-0.5, 0);
-            this->packet = "A";
+            this->packet = "" + std::to_string(greenBall.getPosition().x) + ":" + std::to_string(greenBall.getPosition().y);
+            //this->packet = "A";
         }
         if (sf::Keyboard::isKeyPressed(sf::Keyboard::S)) {
             greenBall.move(0, 0.5);
-            this->packet = "S";
+            this->packet = "" + std::to_string(greenBall.getPosition().x) + ":" + std::to_string(greenBall.getPosition().y);
+            //this->packet = "S";
         }
         if (sf::Keyboard::isKeyPressed(sf::Keyboard::D)) {
             greenBall.move(0.5, 0);
-            this->packet = "D";
+            this->packet = "" + std::to_string(greenBall.getPosition().x) + ":" + std::to_string(greenBall.getPosition().y);
+            //this->packet = "D";
         }
     }
 }
@@ -64,8 +70,27 @@ void Game::updateFromSerer()
         socket->receive(p);
         p >> (packet);
 
+        sf::Vector2f pos = {100,100};
 
-        if (packet == "W")
+        if (packet != "N")
+        {
+            std::istringstream ss(packet);
+
+            if (std::getline(ss, packet, ':')) {
+                pos.x = std::stof(packet); // Convert the string to float 
+            }
+
+            // Read the second float value
+            if (std::getline(ss, packet, ':')) {
+                pos.y = std::stof(packet); // Convert the string to float 
+            }
+
+            greenBall.setPosition(pos);
+        }
+
+        //iss >> x delimiter >> y;
+
+        /*if (packet == "W")
         {
             greenBall.move(0, -0.5);
         }
@@ -80,7 +105,7 @@ void Game::updateFromSerer()
         else if (packet == "D")
         {
             greenBall.move(0.5, 0);
-        }
+        }*/
 
     }
 }

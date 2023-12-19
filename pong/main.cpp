@@ -19,7 +19,7 @@ int main() {
 		socket = server.start();
 
 
-		sf::RenderWindow win(sf::VideoMode(800, 600), "game Window");
+		sf::RenderWindow win(sf::VideoMode(800, 600), "server");
 		Game* game = new Game(&win, false, socket);
 		game->run();
 	}
@@ -29,11 +29,11 @@ int main() {
 		socket = client.connect();
 
 
-		std::string data_to_send;
+		/*std::string data_to_send;
 		std::cout << "Enter data to send: ";
 		std::cin >> data_to_send;
-		client.sendData(data_to_send);
-		sf::RenderWindow win(sf::VideoMode(800, 600), "game Window");
+		client.sendData(data_to_send);*/
+		sf::RenderWindow win(sf::VideoMode(800, 600), "client");
 		Game* game = new Game(&win, true, socket);
 		game->run();
 	}
