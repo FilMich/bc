@@ -18,6 +18,7 @@ public:
 private:
     sf::RenderWindow* window;
     sf::CircleShape greenBall;
+    sf::CircleShape greenBallServer;
     sf::Clock clock;
     bool moved = false;
     bool canStart = false;

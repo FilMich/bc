@@ -13,48 +13,90 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Source Files\Server">
+      <UniqueIdentifier>{65ab3a2b-da11-4afa-99ed-0689a3815ba2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Player">
+      <UniqueIdentifier>{0a6bb5f2-12bb-4696-84c0-f24abb9b1023}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Menu">
+      <UniqueIdentifier>{185019ce-1cb3-4de3-875f-2d89edc77d1c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Lobby">
+      <UniqueIdentifier>{eef2a33c-d2d8-40b6-9ca6-d6f05ab5ab29}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Game">
+      <UniqueIdentifier>{1b09fca5-2ec8-423b-9a8a-5aa8a4683860}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Client">
+      <UniqueIdentifier>{a6f568ac-d238-41db-9d18-bc6eb2a0694d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\SServer">
+      <UniqueIdentifier>{041931f3-be9b-42f1-b642-d0fdc06e80e1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\CClient">
+      <UniqueIdentifier>{12d6cd71-1f7a-46a2-9dae-d1d962e684d4}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Game.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Player.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="menu.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="escMenu.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="client.h">
-      <Filter>Header Files</Filter>
+    <ClCompile Include="server.cpp">
+      <Filter>Source Files\Server</Filter>
     </ClCompile>
     <ClCompile Include="server.h">
-      <Filter>Header Files</Filter>
+      <Filter>Source Files\Server</Filter>
     </ClCompile>
-    <ClCompile Include="server.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="client.h">
+      <Filter>Source Files\Client</Filter>
     </ClCompile>
     <ClCompile Include="client.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\Client</Filter>
+    </ClCompile>
+    <ClCompile Include="escMenu.cpp">
+      <Filter>Source Files\Menu</Filter>
+    </ClCompile>
+    <ClCompile Include="menu.cpp">
+      <Filter>Source Files\Menu</Filter>
+    </ClCompile>
+    <ClCompile Include="Game.cpp">
+      <Filter>Source Files\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="Player.cpp">
+      <Filter>Source Files\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="lobby.cpp">
+      <Filter>Source Files\Lobby</Filter>
+    </ClCompile>
+    <ClCompile Include="cclient.cpp">
+      <Filter>Source Files\CClient</Filter>
+    </ClCompile>
+    <ClCompile Include="sserver.cpp">
+      <Filter>Source Files\SServer</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Game.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Player.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="escMenu.h">
-      <Filter>Header Files</Filter>
+      <Filter>Source Files\Menu</Filter>
     </ClInclude>
     <ClInclude Include="menu.h">
-      <Filter>Header Files</Filter>
+      <Filter>Source Files\Menu</Filter>
+    </ClInclude>
+    <ClInclude Include="Game.h">
+      <Filter>Source Files\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="Player.h">
+      <Filter>Source Files\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="lobby.h">
+      <Filter>Source Files\Lobby</Filter>
+    </ClInclude>
+    <ClInclude Include="cclient.h">
+      <Filter>Source Files\CClient</Filter>
+    </ClInclude>
+    <ClInclude Include="sserver.h">
+      <Filter>Source Files\SServer</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
